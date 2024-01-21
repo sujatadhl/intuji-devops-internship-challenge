@@ -27,14 +27,21 @@ I created a [docker-composse.yml](docker-composse.yml).
 ### 4. Install Jenkins. Install necessary plugins. Create a freestyle project for building a CI/CD pipeline for the above application which will build artifacts using a docker file directly from your GitHub repo.
 I installed jenkins following the official Jenkins installation fron the website. Then accessed jenkins from web browser through 'http://localhost:8080'.
 I then installed all recommended plugins.
-### Creating a freestyle project:
+#### Creating a freestyle project:
    - In the Jenkins dashboard, i Clicked on "new item" to create freestyle project.
    - I set the name for project as php-hello-world.
    - I choose freestyle project as project type and clicked on OK.
+     ![image](https://github.com/sujatadhl/intuji-devops-internship-challenge/assets/154523112/2960f6ad-a64c-4f39-9eff-8bc5affbbb8b)
 
 I then configured the following in the project settings:
 Source Code Management: Git (entered my repository)
+![image](https://github.com/sujatadhl/intuji-devops-internship-challenge/assets/154523112/7fd0ba94-33f3-4e0c-896d-f3aaab8f170f)
+
 Build: Execute shell (Command: docker build -t dahalsujata52897/php-hello-world .)
+![image](https://github.com/sujatadhl/intuji-devops-internship-challenge/assets/154523112/74c6457e-5a35-4daa-b308-4524809ec06d)
+
 This sets up CI/CD pipeline in Jenkins.
 
 Finally i clicked on 'Build Now' to manually trigger the build initially.
+![image](https://github.com/sujatadhl/intuji-devops-internship-challenge/assets/154523112/9f9eb10d-77b2-4b8f-928e-40fa5a4a179b)
+
